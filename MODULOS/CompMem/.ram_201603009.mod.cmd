@@ -1,0 +1,1 @@
+cmd_/home/kruiz/Proyecto1_SOPES/MODULOS/CompMem/ram_201603009.mod := { echo  /home/kruiz/Proyecto1_SOPES/MODULOS/CompMem/ram_201603009.o;  echo; } > /home/kruiz/Proyecto1_SOPES/MODULOS/CompMem/ram_201603009.mod

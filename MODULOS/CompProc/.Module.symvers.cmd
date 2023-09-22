@@ -1,0 +1,1 @@
+cmd_/home/kruiz/Proyecto1_SOPES/MODULOS/CompProc/Module.symvers := sed 's/\.ko$$/\.o/' /home/kruiz/Proyecto1_SOPES/MODULOS/CompProc/modules.order | scripts/mod/modpost -m -a  -o /home/kruiz/Proyecto1_SOPES/MODULOS/CompProc/Module.symvers -e -i Module.symvers   -T -

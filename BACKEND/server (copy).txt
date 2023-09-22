@@ -1,0 +1,182 @@
+package main
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
+	"os"
+	"time"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+var direccion = "127.0.0.1"
+var ruta = "proc"
+
+var ID = "0"
+
+func main() {
+
+	uniqueID()
+
+	for true {
+		repe()
+		time.Sleep(2 * time.Second)
+	}
+
+}
+
+func repe() {
+	CPU()
+	RAM()
+	PROC()
+}
+
+func CPU() {
+
+	//try to read cpu module on proc/cpu_201603009
+	cpu, err := ioutil.ReadFile("/" + ruta + "/cpu_201603009")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	requestBody, error := json.Marshal(map[string]string{
+		"data":    string(cpu),
+		"machine": "1",
+	})
+
+	if error != nil {
+		print(error)
+	}
+
+	response, error := http.Post("http://"+direccion+":8080/save_cpu_info",
+		"application/json", bytes.NewBuffer(requestBody))
+	if error != nil {
+		print(error)
+	}
+
+	defer response.Body.Close()
+	body, error := ioutil.ReadAll(response.Body)
+	if error != nil {
+		print(error)
+	}
+
+	fmt.Println(string(body))
+
+}
+
+func RAM() {
+
+	//try to read cpu module on proc/cpu_201603009
+	ram, err := ioutil.ReadFile("/" + ruta + "/ram_201603009")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	requestBody, error := json.Marshal(map[string]string{
+		"data":    string(ram),
+		"machine": "3",
+	})
+
+	if error != nil {
+		print(error)
+	}
+
+	response, error := http.Post("http://"+direccion+":8080/save_ram_info",
+		"application/json", bytes.NewBuffer(requestBody))
+	if error != nil {
+		print(error)
+	}
+
+	defer response.Body.Close()
+	body, error := ioutil.ReadAll(response.Body)
+	if error != nil {
+		print(error)
+	}
+
+	fmt.Println(string(body))
+}
+
+func PROC() {
+
+	//try to read cpu module on proc/cpu_201603009
+	pro, err := ioutil.ReadFile("/" + ruta + "/pro_201603009")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	requestBody, error := json.Marshal(map[string]string{
+		"data":    string(pro),
+		"machine": "2",
+	})
+
+	if error != nil {
+		print(error)
+	}
+
+	response, error := http.Post("http://"+direccion+":8080/save_pro_info",
+		"application/json", bytes.NewBuffer(requestBody))
+	if error != nil {
+		print(error)
+	}
+
+	defer response.Body.Close()
+	body, error := ioutil.ReadAll(response.Body)
+	if error != nil {
+		print(error)
+	}
+
+	fmt.Println(string(body))
+}
+
+func Peticion(ruta string, data string) {
+
+	requestBody, error := json.Marshal(map[string]string{
+		"data":    data,
+		"machine": ID,
+	})
+
+	if error != nil {
+		print(error)
+	}
+
+	response, error := http.Post(ruta,
+		"application/json", bytes.NewBuffer(requestBody))
+	if error != nil {
+		print(error)
+	}
+
+	defer response.Body.Close()
+	body, error := ioutil.ReadAll(response.Body)
+	if error != nil {
+		print(error)
+	}
+
+	fmt.Println(string(body))
+
+}
+
+//INICIA EJECUCION DE COMANDOS ID UNICO Y ASIGNACION
+
+func uniqueID() {
+	//echo $(date +%s%N)>idx.txt
+	base, err := os.UserHomeDir()
+	idUnique, err := ioutil.ReadFile(string(base) + "/id.txt")
+
+	println("Ruta ID UNICO:")
+	println(string(base) + "/id.txt")
+
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		//guarda el id que le corresponde
+		ID = string(idUnique)
+	}
+
+}

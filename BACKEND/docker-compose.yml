@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  back:
+    container_name: back
+    image: back_proyecto_1
+    environment:
+      API_IP: 197.0.0.3
+      RUTA_PROC: 'modulos'
+    volumes:
+     - /proc:/modulos
+     
+
+
+
+# Names our volume
+volumes:
+  mydb_temp: 
+  

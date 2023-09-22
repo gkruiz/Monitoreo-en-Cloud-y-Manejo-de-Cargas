@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  gol9:
+    container_name: goapi9
+    image: kruiz9/api_p2_201603009
+    
+    ports:
+      - 8080:8080
+
+

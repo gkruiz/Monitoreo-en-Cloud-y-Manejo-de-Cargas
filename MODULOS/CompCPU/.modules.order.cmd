@@ -1,0 +1,1 @@
+cmd_/home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/modules.order := {   echo /home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/cpu_201603009.ko; :; } | awk '!x[$$0]++' - > /home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/modules.order

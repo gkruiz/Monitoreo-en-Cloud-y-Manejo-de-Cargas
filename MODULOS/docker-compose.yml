@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  gol9:
+    container_name: goapi9
+    image: kruiz9/goapi0
+    volumes:
+     - /proc:/modulos
+    ports:
+      - 8000:8000
+
+

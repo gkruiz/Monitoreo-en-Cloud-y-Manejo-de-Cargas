@@ -1,0 +1,1 @@
+cmd_/home/kruiz/PRUEBAS/practica2/PruebasSO1/CompMem/module_ram_p1.mod := { echo  /home/kruiz/PRUEBAS/practica2/PruebasSO1/CompMem/module_ram_p1.o;  echo; } > /home/kruiz/PRUEBAS/practica2/PruebasSO1/CompMem/module_ram_p1.mod

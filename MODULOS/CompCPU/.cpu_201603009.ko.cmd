@@ -1,0 +1,1 @@
+cmd_/home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/cpu_201603009.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/cpu_201603009.ko /home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/cpu_201603009.o /home/kruiz/Proyecto1_SOPES/MODULOS/CompCPU/cpu_201603009.mod.o;  true

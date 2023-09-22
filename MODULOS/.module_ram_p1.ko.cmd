@@ -1,0 +1,1 @@
+cmd_/home/m/PruebasSO1/module_ram_p1.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/m/PruebasSO1/module_ram_p1.ko /home/m/PruebasSO1/module_ram_p1.o /home/m/PruebasSO1/module_ram_p1.mod.o;  true
