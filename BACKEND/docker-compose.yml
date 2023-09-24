@@ -4,11 +4,13 @@ services:
     container_name: back
     image: back_proyecto_1
     environment:
-      API_IP: 197.0.0.3
+      API_IP: 34.152.16.193
       RUTA_PROC: 'modulos'
     volumes:
      - /proc:/modulos
-     
+    dns:
+     - 8.8.8.8
+     - 4.4.4.4
 
 
 

@@ -11,7 +11,7 @@ import 'react-circular-progressbar/dist/styles.css';
 //Indica la maquina que esta seleccionada , por default siempre es la uno 
 var Maquina='0';
 
-var direccion='http://197.0.0.3:8080/' //'http://127.0.0.1:8080/';
+var direccion='http://34.152.16.193:8080/' //'http://127.0.0.1:8080/';
 
 //REACT_APP_IP
 //ES LA IP DE LA API
@@ -56,10 +56,9 @@ const Consult =async (ruta,body)=>{
 
   const navigate = useNavigate();
 
-
+  console.log("REACT_APP_APIKEY:"+process.env.REACT_APP_APIKEY);
 
   const inicioH = () => {
-    // 👇️ navigate to /
     navigate('/graficas');
   };
 

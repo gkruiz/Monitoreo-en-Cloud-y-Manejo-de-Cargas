@@ -31,9 +31,9 @@ var con = mysql.createPool({
 
 app.get('/',cors(), async function(req, res) {
 
-  var reg = await loadData();
-
-  res.json({ mensaje:  reg})
+  //var reg = await loadData();
+''
+  res.json({ mensaje:  "ok"})
 })
 
 
@@ -58,11 +58,6 @@ app.post('/save_cpu_info', async function(req, res) {
     var query = `INSERT INTO CPU_DATA(machine,cpu_total,cpu_usado,fecha)VALUES('`+machine+`',`+total+`,`+usado+`,NOW());`; 
 
     runQuery(query)
-
-
-    //ASIGN DATA TO CORRECT
-    //cpu_informacion[machine-1]=cpu_structure;
-    //cpu_informacion.push(cpu_structure);
 
     res.status(200).json({mensaje:"OK"});
 })
@@ -335,8 +330,19 @@ var sql3 = `CREATE TABLE IF NOT EXISTS PRO_DATA(
     fecha DATETIME NOT NULL
 );`; 
 
+
+
+var sql4 = `DROP TABLE IF EXISTS CPU_DATA;`; 
+var sql5 = `DROP TABLE IF EXISTS RAM_DATA;`; 
+var sql6 = `DROP TABLE IF EXISTS PRO_DATA;`; 
+
+
 app.listen(port)
 console.log('API escuchando en el puerto ' + port)
+//console.log('DROP CPU_TABLE:' +  runQuery(sql4))
+//console.log('DROP RAM_TABLE:' +  runQuery(sql5))
+//console.log('DROP PRO_TABLE:' +  runQuery(sql6))
+
 console.log('CPU_TABLE:' +  runQuery(sql1))
 console.log('RAM_TABLE:' +  runQuery(sql2))
 console.log('PRO_TABLE:' +  runQuery(sql3))

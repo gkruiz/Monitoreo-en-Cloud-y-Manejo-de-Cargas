@@ -19,7 +19,7 @@ var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 //Indica la maquina que esta seleccionada , por default siempre es la uno 
 var Maquina='0';
 
-var direccion=process.env.REACT_APP_IP //'http://127.0.0.1:8080/';
+var direccion='http://34.152.16.193:8080/'//'http://127.0.0.1:8080/';
 
 
 

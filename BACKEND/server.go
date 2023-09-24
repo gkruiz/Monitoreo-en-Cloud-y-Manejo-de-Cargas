@@ -7,7 +7,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -15,8 +14,8 @@ import (
 	_ "github.com/google/uuid"
 )
 
-var direccion = os.Getenv("API_IP") //"127.0.0.1"
-var ruta = "modulos"                //"proc"
+var direccion = "34.152.16.193" //os.Getenv("API_IP") //"127.0.0.1"
+var ruta = "proc"               //"proc"
 
 var ID = "0"
 
