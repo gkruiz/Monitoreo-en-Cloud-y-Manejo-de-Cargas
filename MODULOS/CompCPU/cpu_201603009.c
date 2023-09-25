@@ -59,7 +59,7 @@ static int proc_cpu_show(struct seq_file *m, void *v){
     //unsigned long cpu_total, cpu_usado;
 	cpu_total = cpu_user + cpu_nice + cpu_sys + cpu_idle + cpu_iowait+ cpu_hirq + cpu_sirq + cpu_steal;
     cpu_usado = cpu_idle + cpu_iowait;
-    cpu_usado = cpu_total - cpu_usado;
+    //cpu_usado = cpu_total - cpu_usado;
 
     seq_printf(m, "[{ \"cpu_usado\": %lu, \"cpu_total\": %lu }]", cpu_usado, cpu_total);
 	return 0;
