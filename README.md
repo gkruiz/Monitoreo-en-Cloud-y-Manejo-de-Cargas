@@ -59,7 +59,7 @@ adicional a eso , se debe de configurar los comandos que necesitemos ejecutar al
 
 
 
-# Grupo de Instancias
+## Grupo de Instancias
 
 ya creada la plantilla entonces procedemos a crear el grupo de instancias , configuraremos la cantidad de maquinas minimas y maximas que necesitaremos , luego asignaremos el en base a que debe de crear otra maquina , en este caso tomaremos de base el uso del cpu al 60% , y por ultimo elegiremos la plantilla que creamos anteriormente , por ultimo procederemos a crearlo esto nos creara la cantidad de instancias minima , en nuestro caso sera una maquina
 
@@ -69,7 +69,7 @@ ya creada la plantilla entonces procedemos a crear el grupo de instancias , conf
 
 
 
-# Servicios Monitoreados
+## Servicios Monitoreados
 
 
 ahora que esta creado nuestro grupo de instancias y nuestra maquina maesetra nos mostrara las maquinas creadas en la interfaz grafica , como se muestra en la imagen:
@@ -89,7 +89,7 @@ tambien podremos visualizar los datos de cpu y de ram de la maquina virtual sele
 <img src="https://github.com/gkruiz/so1_proyecto1_2S2023_201603009/blob/main/IMAGENES/Screenshot%20from%202023-09-24%2018-06-00.png?raw=true"  style="width:800px"/>
 
 
-# Archivo YML
+## Archivo YML
 
 con el siguiente archivo se levanta la instancia en la maquina master:
 
