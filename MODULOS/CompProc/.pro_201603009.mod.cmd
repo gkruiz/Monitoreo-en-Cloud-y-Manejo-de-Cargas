@@ -1,1 +1,0 @@
-cmd_/home/kruiz/Proyecto1_SOPES/MODULOS/CompProc/pro_201603009.mod := { echo  /home/kruiz/Proyecto1_SOPES/MODULOS/CompProc/pro_201603009.o;  echo; } > /home/kruiz/Proyecto1_SOPES/MODULOS/CompProc/pro_201603009.mod

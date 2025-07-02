@@ -1,1 +1,0 @@
-cmd_/home/kruiz/PRUEBAS/practica2/PruebasSO1/CompCPU/module_cpu_p1.mod := { echo  /home/kruiz/PRUEBAS/practica2/PruebasSO1/CompCPU/module_cpu_p1.o;  echo; } > /home/kruiz/PRUEBAS/practica2/PruebasSO1/CompCPU/module_cpu_p1.mod
